@@ -1,6 +1,6 @@
 import random
 
-print("Build your own random sport team!")
+print("Build your own random sport teams!")
 
 names = [
     # Male Names
@@ -27,5 +27,20 @@ print("Team 1's Captain is:", team1_cap)
 print("")
 print("Team 1:")
 for member in first_team:
+    print(member)
+print("")
+
+#TEAM 2:
+second_team = names[len(names)//2:]
+print("")
+
+#picking a captain randomly for the team
+team2_cap = random.choice(second_team)
+print("Team 2's Captain is:", team2_cap)
+
+#dispalying the first team:
+print("")
+print("Team 2:")
+for member in second_team:
     print(member)
 print("")
