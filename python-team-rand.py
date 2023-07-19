@@ -56,6 +56,9 @@ while True:
         print("")
         for i in range (0, 40, 2):
             print(names[i] + " will play against " + names[i+1])
+            starting_player = random.randrange(i, i+2)
+            print(names[starting_player] + " will start the match")
+
     #asking the user if they are happy with the teams
     print("")
     answer = input("Pick teams again or are you happy with them? Type 'yes' or 'no' below:\n")
