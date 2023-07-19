@@ -3,6 +3,7 @@ import random
 print("Build your own random sport teams!")
 
 while True:
+    print("")
     names = [
         # Male Names
         "Liam", "Noah", "Oliver", "Ethan", "Aiden", "Mason", "Caden", "Jackson", "Lucas", "Logan",
@@ -16,37 +17,47 @@ while True:
     print("Time to randomize the teams....")
     random.shuffle(names)
 
-    #spliting the randomized list to 2 teams.....starting with team1
-    first_team = names[:len(names)//2]
-    print("")
+    #asking the user is it a team or individual sport
+    response = input("Is this an individual or team sport? (type: individual or team)\n")
 
-    #picking a captain randomly for the team
-    team1_cap = random.choice(first_team)
-    print("Team 1's Captain is:", team1_cap)
+    if response == "team":
 
-    #dispalying the first team:
-    print("")
-    print("Team 1:")
-    for member in first_team:
-        print(member)
-    print("")
+        #spliting the randomized list to 2 teams.....starting with team1
+        first_team = names[:len(names)//2]
+        print("")
 
-    #TEAM 2:
-    second_team = names[len(names)//2:]
-    print("")
+        #picking a captain randomly for the team
+        team1_cap = random.choice(first_team)
+        print("Team 1's Captain is:", team1_cap)
 
-    #picking a captain randomly for the team
-    team2_cap = random.choice(second_team)
-    print("Team 2's Captain is:", team2_cap)
+        #dispalying the first team:
+        print("")
+        print("Team 1:")
+        for member in first_team:
+            print(member)
+        print("")
 
-    #dispalying the first team:
-    print("")
-    print("Team 2:")
-    for member in second_team:
-        print(member)
-    print("")
+        #TEAM 2:
+        second_team = names[len(names)//2:]
+        print("")
 
+        #picking a captain randomly for the team
+        team2_cap = random.choice(second_team)
+        print("Team 2's Captain is:", team2_cap)
+
+        #dispalying the first team:
+        print("")
+        print("Team 2:")
+        for member in second_team:
+            print(member)
+        print("")
+
+    else:
+        print("")
+        for i in range (0, 40, 2):
+            print(names[i] + " will play against " + names[i+1])
     #asking the user if they are happy with the teams
+    print("")
     answer = input("Pick teams again or are you happy with them? Type 'yes' or 'no' below:\n")
     if answer == "no":
         break
